@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title">TO DO LIST</h1>
+    <img src="cute-cartoon-holding-green-pen-digitally-generated-pencil-54023812 (1).jpg">
+    <form action='/newToDo' class="form-style" method="POST" >
+        <input type="text", placeholder="Enter a task", id="name", name="task">
+        <!-- <span onclick=true , class="add-btn" type="submit">+</span> -->
+        <button class='add-btn' type='submit'>+</button>
+        <table class="table">
+            <% tasks.forEach(task=> { %>
+        <tr class="list">
+            <td class="items">
+                <button class="remove">&#10006</button> 
+                <a href="#" id="txt">
+                    <%=task.task %></a>
+            </td>
+            </tr>
+            <% }) %>
+    <!--</tr>
+        <tr class="list">
+            <td class="items">
+            <button class="remove">&#10006</button> <a href="#" id="txt">do laundry</a>
+            </td> 
+        </tr>
+        <tr class="list"> -->
+            <!-- <td class="items" > -->
+                <!-- <button class="remove">&#10006</button> <a href="#" id="txt">watch course</a> -->
+            <!-- </td> -->
+        <!-- </tr> --> 
+        </table> 
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
